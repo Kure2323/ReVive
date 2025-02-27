@@ -1,21 +1,13 @@
 package org.example.ReVive;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 import org.example.ReVive.interfaces.ICheck;
-
-
 import java.time.LocalDate;
 
-@ToString
+
 public class Proyect_Ecosystem implements ICheck {
     public int numId = 0;
-    @Getter
     private int id;
-    @Getter @Setter
     private String eco_type;
-    @Getter
     private String proj_name;
     private String localization;
     private LocalDate restaurationDate;

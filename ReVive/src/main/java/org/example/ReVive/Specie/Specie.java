@@ -1,23 +1,12 @@
 package org.example.ReVive.Specie;
 
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-import lombok.ToString;
-
-@ToString
-@RequiredArgsConstructor
 abstract class Specie {
 
-    @NonNull @Getter
+
     private String specieID;
-    @Getter
     private String commonName;
-    @Getter @NonNull
     private String cientName;
-    @Getter @NonNull
     private boolean dangerSpecies;
-    @Getter @NonNull
     private String location;
 
     //Usado para generar la ID
