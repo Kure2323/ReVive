@@ -1,6 +1,6 @@
 package org.example.ReVive.Specie;
 
-abstract class Specie {
+public abstract class Specie {
 
 
     private String specieID;
