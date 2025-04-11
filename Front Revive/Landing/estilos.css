@@ -1,0 +1,168 @@
+body {
+    background-color: #ebf9fe;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header {
+    display: flex;
+    justify-self: center;
+    background-color: #87d5fc;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#revive_estatico{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 7%;
+    z-index: 100;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+
+#section_centro {
+    display: flex;
+    justify-self: center;
+    width: 90%;
+    max-width: 1200px;
+    margin:auto;
+}
+
+.blanco {
+    color:white;
+}
+
+.fondo_azul {
+    background-color: #87d5fc;
+}
+
+div {
+    display: flex;
+    width: 50%;
+    font-size: 40px;
+    color:rgb(49, 49, 49);
+    justify-content: center;
+    flex-direction: column;
+}
+
+#div_titulo_izq {
+    padding-top: 100px;
+    padding-left:20px;
+}
+
+
+#inicio_sesion1 {
+    width: 35%;
+    border-style: none;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: #8ffcfc;
+    color:#252525;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 15px;
+    transition:0.1s;
+}
+
+#inicio_sesion2 {
+    width: 20%;
+    border-style: none;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: #87d5fc;
+    color:#252525;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 15px;
+    transition:0.1s;
+}
+
+#inicio_sesion1:hover {
+    background-color: #87f1f1;
+}
+
+#inicio_sesion2:hover {
+    background-color: #7ac2e6;
+}
+
+.div_main_izq1 {
+    margin-top:100px;
+    border-right: 2px solid rgb(218, 218, 218);
+}
+
+.div_main_drc1 {
+    margin-top:100px;
+    border-bottom: 2px solid rgb(218, 218, 218);
+}
+
+#img_mapa_cv {
+    border-radius: 40px;
+    padding:20px;
+}
+
+.div_main_drc1>p {
+    font-size: 15px;
+    text-align: right;
+}
+
+.div_main_izq2 {
+    margin-top:100px;
+    border-right: 2px solid rgb(218, 218, 218);
+    border-top: 2px solid rgb(218, 218, 218);
+}
+
+.div_main_izq2>p {
+    font-size: 15px;
+    text-align: left;
+}
+
+.div_main_drc2 {
+    margin-top:100px;
+    text-align: right;
+}
+
+#img_mapa_tous {
+    border-radius: 40px;
+    width: 90%;
+    padding:20px;
+
+}
+
+#section_proyectos {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 100px;
+    font-size: 25px;
+}
+
+#div_eco {
+    display: flex;
+    flex-direction: row;
+}
+
+#div_eco>img {
+    width: 50%;
+    padding: 10px;
+}
+
+#section_final {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top:140px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(217, 231, 243);
+    font-size: 25px;
+}
+
+footer {
+    padding-top: 100px;
+    color:rgb(187, 187, 187);
+    text-align: center;
+}
