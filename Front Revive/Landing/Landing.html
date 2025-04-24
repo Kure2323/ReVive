@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
     <title>ReVive</title>
 </head>
+
 <body>
     <header>
         <div id="div_titulo_izq">
-            <h2><span class="blanco">ReVive -</span>  Restauración forestal al alcance de tu mano</h2>
-            <button onclick="location.href='../FormularioInicioSesión/Formulario.html'" id="inicio_sesion1">Comenzar</button>
+            <h2><span class="blanco">ReVive -</span> Restauración forestal al alcance de tu mano</h2>
+            <button onclick="location.href='../FormularioInicioSesión/Formulario.html'"
+                id="inicio_sesion1">Comenzar</button>
         </div>
         <div>
             <img src="Foto_ReVive.png" id="img_titulo">
         </div>
-        
+
     </header>
-    <img id="revive_estatico" src="Foto_ReVive.png"  onclick="location.href='../FormularioInicioSesión/Formulario.html'">
+    <div class="estatico">
+        <img class="revive_estatico" src="Foto_ReVive.png"
+            onclick="location.href='../FormularioInicioSesión/Formulario.html'">
+        <div class="modal_revive_estatico">
+            <p class="fw-bold">Iniciar sesión</p>
+        </div>
+    </div>
+
     <section id="section_centro">
         <div class="div_main_izq1">
-            <h2>Situa puntos de calor en el <span class="blanco"><span class="fondo_azul">mapa interactivo</span></span></h2>
+            <h2>Encuentra puntos de mayor polución en el <span class="blanco"><span class="fondo_azul">mapa de
+                        contaminación</span></span></h2>
         </div>
         <div class="div_main_drc1">
             <img src="MapaEstatico.png" id="img_mapa_cv">
@@ -33,8 +44,9 @@
             <p>Mapa de Tous</p>
         </div>
         <div class="div_main_drc2">
-            <h2>Controla el <span class="blanco"><span class="fondo_azul">nivel de contaminación</span></span> de forma precisa</h2>
-            
+            <h2>Controla el <span class="blanco"><span class="fondo_azul">nivel de contaminación</span></span> de forma
+                precisa</h2>
+
         </div>
     </section>
     <section id="section_proyectos">
@@ -48,8 +60,14 @@
     </section>
     <section id="section_final">
         <h2>Para un futuro más <span class="blanco"><span class="fondo_azul">verde</span></span></h2>
-        <button  onclick="location.href='../FormularioInicioSesión/Formulario.html'" id="inicio_sesion2">COMIENZA YA</button>
+        <button onclick="location.href='../FormularioInicioSesión/Formulario.html'" id="inicio_sesion2">COMIENZA
+            YA</button>
     </section>
-    <footer><p>ReVive©</p><p>Izan López Mora / Pol Gorrindo Bermejo / David Giner Carpena / Alberto Planelles Monllor</p></footer>
+    <footer>
+        <p>ReVive©</p>
+        <p>Izan López Mora / Pol Gorrindo Bermejo / David Giner Carpena / Alberto Planelles Monllor</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>

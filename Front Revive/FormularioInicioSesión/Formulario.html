@@ -9,13 +9,27 @@
 <body>
     <div class="div_formulario_acceso">
         <h1>Iniciar sesión</h1>
-        <form class="form_inicio_sesion">
+        <form name="form" class="form_inicio_sesion">
             <label for="user">Introduce usuario</label>
-            <input for="user" placeholder="Usuario"  class="label_form">
+            <input name="user" type="text" required placeholder="Usuario" class="label_form">
             <label for="pass">Introduce contraseña</label>
-            <input for="pass" placeholder="Contraseña"  class="label_form">
+            <input name="pass" type="password" required placeholder="Contraseña" class="label_form">
             <button type="submit" class="form_boton">Acceder</button>
         </form>
     </div>
+    <script>
+        
+        document.form.addEventListener("submit", function(evento){
+
+            let pass = document.form.pass;
+            let user = document.form.user;
+
+            if (pass.value.trim() !== "" && user.value.trim() !== ""){
+                evento.preventDefault(); //Le dice al evento que no siga con su función para encargarte tú, como programador, más adelante.
+                window.location.href = "../Home/Home.html?user=" + user.value.replace(" ", "_");
+            } 
+        });
+
+    </script>
 </body>
 </html>
