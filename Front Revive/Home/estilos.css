@@ -47,22 +47,21 @@ header>img {
 }
 
 .modal_header {
+    position: fixed;
     background-color: #ffffff;
-    position:absolute;
     z-index:1000;
-    width:150px;
+    width:10%;
     padding:10px;
     border:none;
     line-height: 15px;
-    right:300px;
-    top:70px;
-    transform: translateY(-200%);
+    transform: translateY(-300%);
+    right: 8%;
     transition: 0.1s;
     box-shadow:  0 0 10px rgb(127, 127, 127);
 }
 
 .modal_header.modal_header--show {
-    transform: translateY(0);
+    transform: translateY(70%);
     transition: 0.1s;
 }
 
