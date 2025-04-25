@@ -13,7 +13,6 @@ public class AppReVive {
 
         organization.agregarProyecto(proyecto);
         mainMenu();
-        darDeAlta();
 
 
 
@@ -34,6 +33,10 @@ public class AppReVive {
             switch (in.nextInt()) {
                 case 1:
                     //Enviar a menú de Species
+
+                    specieMenu();
+
+
                     break;
                 case 2:
                     //Enviar a Donations
@@ -43,6 +46,7 @@ public class AppReVive {
                     break;
                 case 4:
                     //Enviar a Proyects
+                    break;
                 case 5:
                     //LLeva al panel de registro y edición de usuarios (Volunteer, Donor y Employee)
                     darDeAlta();
@@ -56,17 +60,37 @@ public class AppReVive {
 
     }
 
-    private static void species() {
+    private static void specieMenu() {
+        System.out.println("***  Species Menu  ***");
+        System.out.println("    1. Go to Birds");
+        System.out.println("    2. Go to Mammal");
+        System.out.println("    3. Go to Reptile");
+        System.out.println("X. Go back");
 
-        System.out.println();
-        System.out.println("***  Species  ***");
-        System.out.println("    1. Bird");
-        System.out.println("    2. Mammal");
-        System.out.println("    3. Reptile");
-        System.out.println("    0. Go back");
-        System.out.println();
 
-        
+        switch (in.next()) {
+
+            case "1":
+                //Enviar a menu de Birds
+
+                System.out.println("***  Bird Menu  ***");
+                System.out.println("    1. Add new Bird");
+                System.out.println("    2. Remove Bird from list");
+
+
+                break;
+            case "2":
+                //Enviar e menu de Mammal
+                break;
+            case "3":
+                //Enviar a menu de Reptile
+                break;
+            default:
+                in.nextLine();
+                mainMenu();
+                break;
+        }
+
 
     }
 
