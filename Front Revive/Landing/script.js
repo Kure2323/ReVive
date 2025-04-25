@@ -25,7 +25,7 @@ const modal_static = document.querySelector(".modal_revive_estatico");
         let win_width = window.screen.width;
         let win_height = window.screen.height;
 
-        if (win_width <= 768) {
+        if (win_width == 768) {
             title.innerHTML = title_mobile;
         } else {
             title.innerHTML = title_pc;
