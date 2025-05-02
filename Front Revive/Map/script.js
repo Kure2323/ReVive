@@ -12,6 +12,8 @@ const down_arr = "arrow-toggle-down-svgrepo-com.svg";
 const brg_black = document.querySelector(".burguer_black");
 //Menú móvil
 const head_smll = document.querySelector(".head_small");
+//Lupa de búsqueda
+const mag_glass = document.querySelector(".glass");
 
 
 (function () {
@@ -55,6 +57,7 @@ const head_smll = document.querySelector(".head_small");
         }
     });
 })();
+
 
 //Mostrar menú del header en formato móvil
 (function () {
