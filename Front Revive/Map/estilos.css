@@ -6,7 +6,68 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#map {
+    display: flex;
+    justify-self: center;
+    height: 70vh;
+    width: 80%;
+    border-radius: 0 10px 0 10px;
+    box-shadow: 0 0 10px rgb(181, 181, 181);
+}
+
+#searcher {
+    display: flex;
+    width: 80%;
+    margin:auto;
+    align-content: center;
+    justify-content: right;
+    padding: 20px 0 20px 0;
+}
+
+.black_border {
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.white_border {
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.insert_population {
+    border:1px solid rgb(156, 156, 156);
+    border-radius: 7px;
+    box-shadow: 0 0 5px gray;
+}
+
+#sender {
+    width: 50px;
+    background-color: #ebf9fe;
+    border:none;
+}
+
+.glass {
+    width: 70%;
+    transition: 0.1s;
+}
+
+.glass:hover {
+    opacity: 0.5;
+
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    margin:auto;
+}
+
+.title>h1 {
+    color: rgb(58, 58, 58);
+}
+
 @media (min-width:769px){
+
     header {
         display: flex;
         justify-content: space-between;
@@ -89,10 +150,17 @@ body {
         color: rgb(232, 232, 232);
         background-color: #7ac2e6;
     }
-    
-    .black_border {
-        border: 1px solid rgb(0, 0, 0);
+
+    #map {
+        display: flex;
+        justify-self: center;
+        height: 70vh;
+        width: 80%;
+        border-radius: 0 10px 0 10px;
+        box-shadow: 0 0 10px rgb(181, 181, 181);
     }
+    
+    
 }
 
 @media (max-width:768px) {
@@ -151,7 +219,7 @@ body {
     }
     
     header>nav>a:hover {
-        color: rgb(156, 156, 156);
+        color: rgb(119, 119, 119);
     }
     
     header>img {
@@ -170,6 +238,11 @@ body {
         cursor: pointer;
     }
     
+    #usr {
+        color:white;
+        font-weight: bold;
+    }
+
     .arrow_user {
         width:2%;
         cursor: pointer;
@@ -209,15 +282,30 @@ body {
         color: rgb(232, 232, 232);
         background-color: #7ac2e6;
     }
-    
-    .black_border {
-        border: 1px solid rgb(0, 0, 0);
-    }
 
     #usr_smll {
         color:white;
         font-weight: bold;
     }
+
+    #searcher {
+        display: flex;
+        width: 80%;
+        margin:auto;
+        align-content: center;
+        justify-content: center;
+        padding: 20px 0 20px 0;
+    }
+
+    #map {
+        display: flex;
+        justify-self: center;
+        height: 50vh;
+        width: 80%;
+        border-radius: 0 10px 0 10px;
+        box-shadow: 0 0 10px rgb(181, 181, 181);
+    }
+    
 }
 
 footer {

@@ -188,8 +188,14 @@ body {
 
 @media (max-width: 768px) {
 
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
     header {
         text-align: center;
+        justify-content: center;
         background-color: #87d5fc;
         border-radius: 10px 10px 0px 0px;
     }
@@ -238,7 +244,7 @@ body {
     
     #section_centro {
         display: flex;
-        justify-self: center;
+        justify-content: center;
         flex-direction: column;
         width: 100%;
         margin:auto;
@@ -262,8 +268,6 @@ body {
         justify-content: center;
         flex-direction: column;
     }
-    
-    
     
     
     .inicio_sesion2 {
@@ -362,9 +366,6 @@ body {
         font-size: 25px;
     }
 }
-
-
-
 
 footer {
     padding-top: 100px;
