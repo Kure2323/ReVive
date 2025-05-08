@@ -41,3 +41,91 @@ body{
 .form_boton:hover{
     background-color: #7ac2e6;
 }
+
+footer {
+    padding-top: 200px;
+    color:rgb(187, 187, 187);
+    text-align: center;
+}
+
+@media (min-width:900px) {
+    .div_formulario_acceso{
+        display:flex;
+        width: 20%;
+        max-width: 1200px;
+        margin:auto;
+        background-color: white;
+        border-radius: 7px;
+        justify-items: center;
+        padding: 20px;
+        flex-direction: column;
+        margin-top: 10%;
+        box-shadow: 0 0 10px rgb(203, 203, 203);
+    }
+    
+    .form_inicio_sesion{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+    
+    .label_form {
+        border: none;
+        border-bottom: 1px solid rgb(151, 150, 150);
+    }
+    
+    .form_boton {
+        border-radius: 7px;
+        background-color: #87d5fc;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        transition-duration: 0.2s;
+    }
+    
+    .form_boton:hover{
+        background-color: #7ac2e6;
+    }
+}
+
+@media (max-width:899px) {
+    .div_formulario_acceso{
+        display:flex;
+        width: 50%;
+        max-width: 1200px;
+        margin:auto;
+        background-color: white;
+        border-radius: 7px;
+        justify-items: center;
+        padding: 20px;
+        flex-direction: column;
+        margin-top: 10%;
+        box-shadow: 0 0 10px rgb(203, 203, 203);
+    }
+    
+    .form_inicio_sesion{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+    
+    .label_form {
+        border: none;
+        border-bottom: 1px solid rgb(151, 150, 150);
+    }
+    
+    .form_boton {
+        border-radius: 7px;
+        background-color: #87d5fc;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        transition-duration: 0.2s;
+    }
+    
+    .form_boton:hover{
+        background-color: #7ac2e6;
+    }
+}
