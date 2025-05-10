@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <img src="../Landing/Foto_ReVive.png">
+        <img src="../Landing/Foto_ReVive.png" alt="imagen_home">
         <nav>
             <a href="#" onclick="irAMapa()">Mapa de Contaminación</a>
             <a href="#" onclick="irAProyectos()">Proyectos</a>
@@ -29,6 +29,7 @@
 
         </div>
         <img src="hamburguesa.svg" class="burguer_black">
+
     </header>
     <div class="head_small">
         <nav>
@@ -43,6 +44,88 @@
             <a href="../FormularioInicioSesión/Formulario.html">Cerrar Sesión</a>
         </nav>
     </div>
+    <div class="img_background">
+        <img src="../Landing/Foto_ReVive.png" alt="revive_background">
+    </div>
+
+    <div id="div_titulo_izq" class="container">
+        <div>
+            <h2 id="title"><span class="blanco">ReVive -</span> Restauración forestal al alcance de tu mano</h2>
+        </div>
+        <div class="div_img_header">
+            <img src="../Landing/Foto_ReVive.png" id="img_titulo">
+        </div>
+    </div>
+    <div class="div_text text-center">
+        <h1>¿Quiénes <span class="blanco fondo_azul fw-bold">somos?</span></h1>
+        <p><span class="blanco" style="font-weight: bold;"><span class="fondo_azul">ReVive©</span></span> es una
+            plataforma que busca facilitar la <strong>restauración de ecosistemas forestales mediante la
+                colaboración entre ciudadanos y organizaciones.</strong> A través de nuestra aplicación, los usuarios
+            pueden
+            monitorear de forma precisa y sencilla el nivel de contaminación de determinas zonas.
+    </div>
+    <div class="div_text text-center">
+        <h1>¿Qué ofrecemos a <span class="blanco fondo_azul fw-bold">nuestros usuarios?</span></h1>
+        <p><span class="blanco fw-bold"><span class="fondo_azul">ReVive©</span></span> ofrece una serie de
+            <strong>herramientas y recursos para ayudar a los usuarios</strong> a participar en la
+            restauración de ecosistemas forestales. Entre ellos se incluyen:</p>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>Acceso a información sobre proyectos de restauración en su área.</p>
+                </div>
+                <div class="col">
+                    <p>Herramientas de monitorización de los niveles de contaminación de las zonas locales.</p>
+                </div>
+                <div class="col">
+                    <p>Oportunidades para participar en eventos de restauración y voluntariado, además de poder donar
+                        para contribuir a la causa.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="div_text">
+        <h1 class="text-center">Algunos proyectos de <span class="blanco fondo_azul fw-bold">ReVive©</span></h1>
+        <div class="row gap-3 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <img src="../Landing/Eco1.avif" class="pt-2 card-img-top" alt="project_1">
+                <div class="card-body">
+                  <h5 class="card-title">Sierra del Fraile, Biar</h5>
+                  <p class="card-text">Sierra en la que plantamos numerosos árboles tras un incendio debastador y reinsertamos a varias especies.</p>
+                  <button class="btn btn-primary" style="background-color:#87d5fc; border:none;" onclick="irAProyectos()">Visitar</button>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="../Landing/Eco2.avif" class="pt-2 card-img-top " alt="project_2">
+                <div class="card-body">
+                  <h5 class="card-title">Río de Anna, Anna</h5>
+                  <p class="card-text">Río que limpiamos exaustivamente y desinfectamos para reinsertar a varias especies.</p>
+                  <button class="btn btn-primary" style="background-color:#87d5fc; border:none;" onclick="irAProyectos()">Visitar</button>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="../Landing/Eco3.jpg" class="pt-2 card-img-top" alt="project_3">
+                <div class="card-body">
+                  <h5 class="card-title">Riu Xúquer, Jarafuel</h5>
+                  <p class="card-text">Río que repoblamos debido a una excasez de peces de una especie en concreto tras una gran riada.</p>
+                  <button class="btn btn-primary" style="background-color:#87d5fc; border:none;" onclick="irAProyectos()">Visitar</button>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+    
+    <div class="div_text">
+        <h1 class="text-center">Nuestro <span class="blanco fondo_azul fw-bold">mapa</span></h1>
+        <p class="text-center">En nuestro mapa podrás ver las diferentes zonas en las que operamos y los niveles de contaminación de cada una de ellas.</p>
+        <div class="d-flex justify-content-center align-items-center flex-column gap-5">
+            <img src="../Landing/MapaEstatico.png" alt="mapa" class="img-fluid" style="width: 80%; border-radius: 10px;">
+            <button class="btn btn-primary" style="background-color:#87d5fc; border:none; width:40%;" onclick="irAMapa()">Ver el mapa</button>
+        </div>    
+    </div>
+
+
     <script>
         //Script que recoge la url de la página la cual contiene al final el user recogido en el inicio de sesión para usarlo en la página home.
         //Almacena el usuario de forma ficticia sin necesidad de un backend que haga de intermediario.
@@ -59,15 +142,15 @@
         usr_id_smll.innerHTML = user;
 
         //Funciones para poder transportar el user a cada página mediante el enlace
-        function irAMapa(){
+        function irAMapa() {
             window.location.href = "../Map/Map.html?user=" + user;
         }
-        
-        function irAProyectos(){
+
+        function irAProyectos() {
             window.location.href = "../Projects/Projects.html?user=" + user;
         }
 
-        function irANosotros(){
+        function irANosotros() {
             window.location.href = "../About/About.html?user=" + user;
 
         }

@@ -2,85 +2,118 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="icon" type="image/png" href="../Landing/Favicon.png">
-    <title>Proyectos - ReVive</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="icon" type="image/png" href="../Landing/Favicon.png">
+  <title>Proyectos - ReVive</title>
 </head>
 
 <body>
-    <header>
-        <img src="../Landing/Foto_ReVive.png" onclick="irAHome()">
-        <nav>
-            <a href="#" onclick="irAMapa()">Mapa de Contaminación</a>
-            <a href="#">Proyectos</a>
-            <a href="#" onclick="irANosotros()">Nosotros</a>
-            <img class="img_user" src="img_user.png">
-            <img class="arrow_user" src="arrow-toggle-down-svgrepo-com.svg">
-        </nav>
-        <div class="modal_header card">
-            <p class="fw-bold">Usuario:</p>
-            <p id="usr_big">Nombre Temporal</p>
+  <header>
+    <img src="../Landing/Foto_ReVive.png" alt="imagen_home" onclick="irAHome()">
+    <nav>
+      <a href="#" onclick="irAMapa()">Mapa de Contaminación</a>
+      <a href="#">Proyectos</a>
+      <a href="#" onclick="irANosotros()">Nosotros</a>
+      <img class="img_user" src="img_user.png">
+      <img class="arrow_user" src="arrow-toggle-down-svgrepo-com.svg">
+    </nav>
+    <div class="modal_header card">
+      <p class="fw-bold">Usuario:</p>
+      <p id="usr_big">Nombre Temporal</p>
 
-            <button class="modal_header_button"
-                onclick="location.href='../FormularioInicioSesión/Formulario.html'">Cerrar sesión</button>
+      <button class="modal_header_button" onclick="location.href='../FormularioInicioSesión/Formulario.html'">Cerrar
+        sesión</button>
 
-        </div>
-        <img src="hamburguesa.svg" class="burguer_black">
-    </header>
-    <div class="head_small">
-        <nav>
-            <div class="p-3 bcolor-white">
-                <img class="img_user" src="img_user.png">
-                <p id="usr_smll">Nombre Temporal</p>
-                <span class="white_border width-100%"></span>
-            </div>
-            <a href="#" onclick="irAMapa()">Mapa de Contaminación</a>
-            <a href="#">Proyectos</a>
-            <a href="#" onclick="irANosotros()">Nosotros</a>
-            <a href="../FormularioInicioSesión/Formulario.html">Cerrar Sesión</a>
-        </nav>
     </div>
-    <script>
-        //Script que recoge la url de la página la cual contiene al final el user recogido en el inicio de sesión para usarlo en la página home.
-        //Almacena el usuario de forma ficticia sin necesidad de un backend que haga de intermediario.
-        const url = window.location.href;
-        let index = url.indexOf("?user=");
-        let max_length = url.length;
-        let user = url.substring((index + 6), max_length);
+    <img src="hamburguesa.svg" class="burguer_black">
+  </header>
+  <div class="head_small">
+    <nav>
+      <div class="p-3 bcolor-white">
+        <img class="img_user" src="img_user.png">
+        <p id="usr_smll">Nombre Temporal</p>
+        <span class="white_border width-100%"></span>
+      </div>
+      <a href="#" onclick="irAMapa()">Mapa de Contaminación</a>
+      <a href="#">Proyectos</a>
+      <a href="#" onclick="irANosotros()">Nosotros</a>
+      <a href="../FormularioInicioSesión/Formulario.html">Cerrar Sesión</a>
+    </nav>
+  </div>
 
-        //Establecer user name en el modal
-        const usr_id_big = document.querySelector("#usr_big");
-        const usr_id_smll = document.querySelector("#usr_smll")
-        document.querySelector("#usr_smll");
-        usr_id_big.innerHTML = user;
-        usr_id_smll.innerHTML = user;
+  <h1 class="text-center">Nuestros proyectos</h1>
+  <div class="row gap-3 d-flex justify-content-center">
+    <div class="card" style="width: 18rem;">
+      <img src="../Landing/Eco1.avif" class="pt-2 card-img-top" alt="project_1">
+      <div class="card-body">
+        <h5 class="card-title">Sierra del Fraile, Biar</h5>
+        <p class="card-text">Sierra en la que plantamos numerosos árboles tras un incendio debastador y reinsertamos a
+          varias especies.</p>
+        <a href="../Donation/Donation.html" class="btn btn-primary"
+          style="background-color:#87d5fc; border:none;">Donar</a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="../Landing/Eco2.avif" class="pt-2 card-img-top " alt="project_2">
+      <div class="card-body">
+        <h5 class="card-title">Río de Anna, Anna</h5>
+        <p class="card-text">Río que limpiamos exaustivamente y desinfectamos para reinsertar a varias especies.</p>
+        <a href="../Donation/Donation.html" class="btn btn-primary"
+          style="background-color:#87d5fc; border:none;">Donar</a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="../Landing/Eco3.jpg" class="pt-2 card-img-top" alt="project_3">
+      <div class="card-body">
+        <h5 class="card-title">Riu Xúquer, Jarafuel</h5>
+        <p class="card-text">Río que repoblamos debido a una excasez de peces de una especie en concreto tras una gran
+          riada.</p>
+        <a href="../Donation/Donation.html" class="btn btn-primary"
+          style="background-color:#87d5fc; border:none;">Donar</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    //Script que recoge la url de la página la cual contiene al final el user recogido en el inicio de sesión para usarlo en la página home.
+    //Almacena el usuario de forma ficticia sin necesidad de un backend que haga de intermediario.
+    const url = window.location.href;
+    let index = url.indexOf("?user=");
+    let max_length = url.length;
+    let user = url.substring((index + 6), max_length);
 
-        //Funciones para poder transportar el user a cada página mediante el enlace
-        function irAMapa(){
-            window.location.href = "../Map/Map.html?user=" + user;
-        }
-        
-        function irAProyectos(){
-            window.location.href = "../Projects/Projects.html?user=" + user;
-        }
+    //Establecer user name en el modal
+    const usr_id_big = document.querySelector("#usr_big");
+    const usr_id_smll = document.querySelector("#usr_smll")
+    document.querySelector("#usr_smll");
+    usr_id_big.innerHTML = user;
+    usr_id_smll.innerHTML = user;
 
-        function irANosotros(){
-            window.location.href = "../About/About.html?user=" + user;
+    //Funciones para poder transportar el user a cada página mediante el enlace
+    function irAMapa() {
+      window.location.href = "../Map/Map.html?user=" + user;
+    }
 
-        }
+    function irAProyectos() {
+      window.location.href = "../Projects/Projects.html?user=" + user;
+    }
 
-        function irAHome() {
-            window.location.href = "../Home/Home.html?user=" + user;
-        }
-    </script>
-    <script src="script.js"></script>
+    function irANosotros() {
+      window.location.href = "../About/About.html?user=" + user;
+
+    }
+
+    function irAHome() {
+      window.location.href = "../Home/Home.html?user=" + user;
+    }
+  </script>
+  <script src="script.js"></script>
 </body>
 <footer>
-    <p>ReVive©</p>
-    <p>Izan López Mora / Pol Gorrindo Bermejo / David Giner Carpena / Alberto Planelles Monllor</p>
+  <p>ReVive©</p>
+  <p>Izan López Mora / Pol Gorrindo Bermejo / David Giner Carpena / Alberto Planelles Monllor</p>
 </footer>
 
 </html>

@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <img src="../Landing/Foto_ReVive.png" onclick="irAHome()">
+        <img src="../Landing/Foto_ReVive.png" alt="imagen_home" onclick="irAHome()">
         <nav>
             <a href="#" onclick="irAMapa()">Mapa de Contaminación</a>
             <a href="#" onclick="irAProyectos()">Proyectos</a>
@@ -43,6 +43,73 @@
             <a href="../FormularioInicioSesión/Formulario.html">Cerrar Sesión</a>
         </nav>
     </div>
+
+    <div class="div_nosotros">
+        <h1>Nosotros</h1>
+        <h2>¿Cuál es nuestro cometido?</h2>
+        <p>En <span class="blanco" style="font-weight: bold;"><span class="fondo_azul">ReVive©</span></span>, como asociación concienciada por el mantenimiento de los ecosistemas locales, ofrecemos una herramienta para
+            que los usuarios puedan observar el estado de la contaminación de su zona con el fin de concienciarlos del estado de 
+            su entorno, ofreciéndoles la posibilidad de colaborar como trabajadores, voluntarios o donantes en nuestros proyectos de 
+            restauración de ecosistemas.
+        </p>
+    </div>
+    <div class="div_mvv">
+        <h1><span class="blanco"><span class="fondo_azul">Misión</span></span>, Visión, <span class="blanco"><span class="fondo_azul"> Valores</span></span></h1>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-sm-4">
+                    <h2 class="fw-bold">Misión</h2>
+                    <p><strong>Proteger y restaurar los ecosistemas locales</strong> mediante la colaboración de los ciudadanos y entidades financieras
+                        capaces de proveer recursos monetarios y materiales para los proyectos.</p>
+                </div>
+                <div class="col-sm-4">
+                    <h2 class="fw-bold">Visión</h2>
+                    <p><strong>Ser una asociación reconocida por su compromiso con la conservación del medio ambiente y la participación ciudadana</strong>, siendo considerada 
+                        por grandes entidades como una de las mejores opciones al querer llevar a cabo la restauración de un ecosistema.</p>
+                </div>
+                <div class="col-sm-4">
+                    <h2 class="fw-bold">Valores</h2>
+                    <p><strong>Compromiso, perseverancia, colaboración y respeto</strong> por el medio ambiente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="div_onu">
+        <h1 class="fw-bold">Objetivos de Desarrollo Sostenible</h1>
+        <p>En <span class="blanco fw-bold" ><span class="fondo_azul">ReVive©</span></span> nos comprometemos a trabajar para alcanzar los siguientes objetivos de desarrollo sostenible:</p>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-sm-4">
+                    <img src="onu_13.jpg" class="onu_13" alt="onu_13" onclick="location.href='https://www.un.org/sustainabledevelopment/es/climate-change-2/'">
+                </div>
+                <div class="col-sm-4">
+                    <img src="onu_14.jpg" class="onu_14" alt="onu_14" onclick="location.href='https://www.un.org/sustainabledevelopment/es/oceans/'">
+                </div>
+                <div class="col-sm-4">
+                    <img src="onu_15.jpg" class="onu_15" alt="onu_15" onclick="location.href='https://www.un.org/sustainabledevelopment/es/biodiversity/'">
+                </div>
+            </div>
+        </div>
+        <div class="onu_text">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h2 class="fw-bold"><span class="blanco fw-bold" ><span class="fondo_azul">13.</span></span> Acción por el clima</h2>
+                    <p><strong>Mejorar la concienciación ciudadana, organizacional e institucional</strong> sobre la mitigación del cambio climático,
+                         la capacidad de resiliencia, la reducción de sus efectos y la sensibilización a este.</p>
+                </div>
+                <div class="col-sm-4">
+                    <h2 class="fw-bold"><span class="blanco fw-bold" ><span class="fondo_azul">14.</span></span> Vida submarina</h2>
+                    <p><strong>Conservar y cuidar los mares y los recursos marinos</strong> para el desarrollo sostenible y la prolongación de la vida de las especies.</p>
+                </div>
+                <div class="col-sm-4">
+                    <h2 class="fw-bold"><span class="blanco fw-bold" ><span class="fondo_azul">15.</span></span> Vida de ecosistemas terrestres</h2>
+                    <p><strong>Proteger, restaurar y promover el uso sostenible de los ecosistemas terrestres</strong>, el cuidado y mantenimiento de los bosques, la lucha contra la desertificación,
+                         detener y revertir la degradación de las tierras y detener la pérdida de biodiversidad.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         //Script que recoge la url de la página la cual contiene al final el user recogido en el inicio de sesión para usarlo en la página home.
         //Almacena el usuario de forma ficticia sin necesidad de un backend que haga de intermediario.
