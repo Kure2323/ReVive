@@ -1,5 +1,11 @@
 package org.example.ReVive;
 
+import org.example.Main;
+import org.example.ReVive.Specie.Bird;
+import org.example.ReVive.Specie.Mammal;
+import org.example.ReVive.Specie.Reptile;
+import org.example.ReVive.Specie.Specie;
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -9,7 +15,14 @@ public class AppReVive {
 
     static Proyect_Ecosystem proyecto = new Proyect_Ecosystem("Dessert", "FreeDessert", "Africa");
     static Organization organization = new Organization("EEOA", 646578710);
+
+    //Lists of all classes needed
     static List<User> userList = new ArrayList<>();
+    static List<Bird> birdList = new ArrayList<>();
+    static List<Mammal> mammalList = new ArrayList<>();
+    static List<Reptile> reptileList = new ArrayList<>();
+
+
     static User user;
     static Scanner in = new Scanner(System.in);
 
@@ -24,6 +37,7 @@ public class AppReVive {
     public static void userMenu() {
 
         System.out.println();
+        System.out.println("***  WELCOME  ***");
         System.out.println("    1. Register");
         System.out.println("    2. Login");
         System.out.println();
@@ -56,6 +70,14 @@ public class AppReVive {
 
                 break;
             case "2":
+
+                if (userList.isEmpty()) {
+                    System.out.println();
+                    System.out.println("There are no Users");
+                    System.out.println();
+                    userMenu();
+                }
+
                 System.out.println();
                 System.out.println("***  Login  ***");
                 System.out.println("Type your username:");
@@ -78,6 +100,9 @@ public class AppReVive {
                 userMenu();
 
                 break;
+            default:
+                in.nextLine();
+                userMenu();
         }
 
     }
@@ -90,8 +115,7 @@ public class AppReVive {
         System.out.println("    2. Go to Donations");
         System.out.println("    3. Go to Organizations");
         System.out.println("    4. Go to Proyects");
-        System.out.println("    5. Edite your User");
-        System.out.println("    6. User menu");
+        System.out.println("    5. User menu");
         System.out.println();
 
         try{
@@ -105,6 +129,15 @@ public class AppReVive {
                     break;
                 case 2:
                     //Enviar a Donations
+
+                    System.out.println();
+                    System.out.println("***  Donations  ***");
+                    System.out.println("    1. Make a donation");
+                    System.out.println("    2. ");
+
+
+
+
                     break;
                 case 3:
                     //Enviar a Organizations
@@ -113,9 +146,6 @@ public class AppReVive {
                     //Enviar a Proyects
                     break;
                 case 5:
-                    //Editar user
-                    break;
-                case 6:
                     //Iniciar sesión y registrar
                     userMenu();
                     break;
@@ -141,13 +171,14 @@ public class AppReVive {
             case "1":
                 //Enviar a menu de Birds
 
-                System.out.println("***  Bird Menu  ***");
-                System.out.println("    1. Add new Bird");
-                System.out.println("    2. Remove Bird from list");
+                birdsMenu();
 
                 break;
             case "2":
                 //Enviar e menu de Mammal
+
+                mammalMenu();
+
                 break;
             case "3":
                 //Enviar a menu de Reptile
@@ -159,6 +190,162 @@ public class AppReVive {
         }
 
 
+    }
+
+    private static void mammalMenu() {
+        System.out.println("***  Mammal Menu  ***");
+        System.out.println("    1. Add new Mammal");
+        System.out.println("    2. Remove Mammal from list");
+        System.out.println("    3. Show all Mammals");
+        System.out.println("X. Go back");
+
+        switch (in.next()) {
+
+            case "1":
+
+                boolean dangerSpecies = false;
+                boolean marsupial = false;
+
+                System.out.println("Common Name:");
+                String commonName = in.next();
+                System.out.println("Scientific Name");
+                String scientName = in.next();
+                System.out.println("Is it dangerous? [Y/N]");
+                if (in.next().equalsIgnoreCase("y")) {
+                    dangerSpecies = true;
+                }
+                System.out.println("Location");
+                String location = in.next();
+                System.out.println("Hair");
+                String hair = in.next();
+                System.out.println("Is it marsupial? [Y/N]");
+                if (in.next().equalsIgnoreCase("y")) {
+                    marsupial = true;
+                }
+
+                mammalList.add(new Mammal(Integer.toString(Specie.generateId()),commonName, scientName,
+                        dangerSpecies,location,hair,marsupial));
+                System.out.println(commonName + " created and added to the Mammal List.");
+                in.nextLine();
+                mammalMenu();
+                break;
+
+            case "2":
+
+                System.out.println("Enter the Scientific name of the mammal you want to remove:");
+                String s = in.next();
+
+                for (Mammal m: mammalList) {
+                    if (m.getScientName().equalsIgnoreCase(s)) {
+                        mammalList.remove(m);
+                        System.out.println(m.getScientName() + " has been removed.");
+                        System.out.println();
+                        break;
+                    }
+                }
+
+                in.nextLine();
+                mammalMenu();
+                break;
+
+            case "3":
+
+                for (Mammal m: mammalList) {
+                    System.out.println();
+                    System.out.println(m);
+                    System.out.println("Hair= " + m.getHair());
+                    System.out.println("Is Marsupial= " + m.isMarsupial());
+                    System.out.println();
+                }
+
+                in.nextLine();
+                mammalMenu();
+                break;
+
+            default:
+                in.nextLine();
+                specieMenu();
+                break;
+
+
+        }
+    }
+
+    private static void birdsMenu() {
+        System.out.println("***  Bird Menu  ***");
+        System.out.println("    1. Add new Bird");
+        System.out.println("    2. Remove Bird from list");
+        System.out.println("    3. Show all Birds");
+        System.out.println("X. Go back");
+
+        switch (in.next()) {
+            case "1":
+
+                boolean dangerSpecies = false;
+
+                System.out.println("Common Name:");
+                String commonName = in.next();
+                System.out.println("Scientific Name");
+                String scientName = in.next();
+                System.out.println("Is it dangerous? [Y/N]");
+                if (in.next().equalsIgnoreCase("y")) {
+                    dangerSpecies = true;
+                }
+                System.out.println("Location");
+                String location = in.next();
+                System.out.println("Type Break");
+                String typeBreak = in.next();
+                System.out.println("Migrate Season");
+                String migrateSeason = in.next();
+
+                Bird bird = new Bird(Integer.toString(Specie.generateId()) ,commonName, scientName, dangerSpecies, location, typeBreak, migrateSeason);
+
+                birdList.add(bird);
+                Specie.specieList.add(bird);
+
+                System.out.println(commonName + " created and added to the Bird List.");
+                in.nextLine();
+                birdsMenu();
+                break;
+
+            case "2":
+
+                System.out.println("Enter the Scientific name of the bird you want to remove:");
+                String s = in.next();
+
+                for (Bird b: birdList) {
+                    if (b.getScientName().equalsIgnoreCase(s)) {
+                        birdList.remove(b);
+                        System.out.println(b.getScientName() + " has been removed.");
+                        System.out.println();
+                        break;
+                    }
+                }
+
+                in.nextLine();
+                birdsMenu();
+                break;
+
+            case "3":
+
+                for (Bird b: birdList) {
+                    System.out.println();
+                    System.out.println(b);
+                    System.out.println("Type Break= " + b.getTypeBreak());
+                    System.out.println("Migrate Season= " + b.getMigrateSeason());
+                    System.out.println();
+                }
+
+                in.nextLine();
+                birdsMenu();
+                break;
+
+            default:
+                in.nextLine();
+                specieMenu();
+                break;
+
+        }
     }
 
 

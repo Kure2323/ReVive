@@ -14,6 +14,11 @@ public class Mammal extends Specie{
     }
 
 
+    public String getHair() {
+        return hair;
+    }
 
-
+    public boolean isMarsupial() {
+        return marsupial;
+    }
 }
