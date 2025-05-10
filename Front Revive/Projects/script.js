@@ -64,9 +64,5 @@ const head_smll = document.querySelector(".head_small");
         
 })();
 
+;
 
-(function () {
-    mag_glass.addEventListener("mouseenter", () => {
-        mag_glass.classList.toggle("glass--over");
-    });
-})();

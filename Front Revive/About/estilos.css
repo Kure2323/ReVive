@@ -6,6 +6,40 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.blanco {
+    color:white;
+}
+
+.fondo_azul {
+    background-color: #87d5fc;
+}
+
+.div_onu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    text-align: center;
+    gap:10px;
+}
+
+.onu_13:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.onu_14:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.onu_15:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+
 @media (min-width:769px){
     header {
         display: flex;
@@ -93,7 +127,61 @@ body {
     .black_border {
         border: 1px solid rgb(0, 0, 0);
     }
-}
+    
+    .div_nosotros {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+        text-align: center;
+        gap:10px;
+    }
+
+    .div_nosotros>h1 {
+        font-size: 45px;
+        font-weight: bold;
+        
+    }
+
+    .div_mvv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        padding-top: 40px;
+        padding-bottom: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px gray;
+    }
+    
+    .div_mvv>h1 {
+        font-size: 45px;
+        font-weight: bold;
+    }
+
+    .onu_13 {
+        box-shadow: 0 0 20px rgb(58, 58, 58);
+    }
+
+    .onu_14 {
+        box-shadow: 0 0 20px rgb(58, 58, 58);
+        z-index: 100;
+    }
+
+    .onu_15 {
+        box-shadow: 0 0 20px rgb(58, 58, 58);
+        z-index: 1000;
+    }
+
+    .onu_text {
+        margin-top: 100px;
+    }
+
+}    
 
 @media (max-width:768px) {
     header {
@@ -217,6 +305,60 @@ body {
     #usr_smll {
         color:white;
         font-weight: bold;
+    }
+
+    .div_nosotros {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+        text-align: center;
+        gap:10px;
+    }
+
+    .div_nosotros>h1 {
+        font-size: 45px;
+        font-weight: bold;
+        
+    }
+
+    .div_mvv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        padding-top: 40px;
+        padding-bottom: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px gray;
+    }
+    
+    .div_mvv>h1 {
+        font-size: 45px;
+        font-weight: bold;
+    }
+
+    .onu_13 {
+        width: 100%;
+        transition: 0.2s;
+    }
+
+    .onu_14 {
+        width: 100%;
+        transition: 0.2s;
+    }
+
+    .onu_15 {
+        width: 100%;
+        transition: 0.2s;
+    }
+
+    .onu_text {
+        margin-top: 100px;
     }
 }
 
